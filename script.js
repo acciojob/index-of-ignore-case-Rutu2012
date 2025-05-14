@@ -1,11 +1,10 @@
 function indexOfIgnoreCase(str: string, subStr: string): number {
-    if (subStr === "") return 0; 
+  // Convert both strings to lowercase for case-insensitive comparison
+  const lowerStr = str.toLowerCase();
+  const lowerSubStr = subStr.toLowerCase();
 
-    const lowerStr = str.toLowerCase();
-    const lowerSubStr = subStr.toLowerCase();
-
-    return lowerStr.indexOf(lowerSubStr);
+  // Use indexOf on the lowercase version
+  return lowerStr.indexOf(lowerSubStr);
 }
-console.log(indexOfIgnoreCase("Hello World","World"));
-console.log(indexOfIgnoreCase("apple","Pie"));
-console.log(indexOfIgnoreCase("test","aaa"));
+console.log(indexOfIgnoreCase("Hello World","world"));
+console.log(indexOfIgnoreCase("apple","Ple"));
