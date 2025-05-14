@@ -1,19 +1,13 @@
-function indexOfIgnoreCase(str: string, subStr: string): number {
-  // Check for null or undefined inputs
-  if (str == null || subStr == null) {
-    return -1;
-  }
-
-  // Convert both strings to lowercase for case-insensitive comparison
-  const lowerStr = str.toLowerCase();
-  const lowerSubStr = subStr.toLowerCase();
-
-  // Use indexOf on the lowercase version
-  return lowerStr.indexOf(lowerSubStr);
+function indexOfIgnoreCase(s1, s2) {
+  // Convert both strings to lowercase (or uppercase) to make the search case-insensitive
+  const lowerS1 = s1.toLowerCase();
+  const lowerS2 = s2.toLowerCase();
+  
+  // Return the index of the first occurrence of the substring (case-insensitively)
+  return lowerS1.indexOf(lowerS2);
 }
 
-// Test cases
-console.log(indexOfIgnoreCase("Hello World", "world")); // 6
-console.log(indexOfIgnoreCase("apple", "Ple"));         // 2
-console.log(indexOfIgnoreCase("banana", "Na"));         // 2
-console.log(indexOfIgnoreCase("Test", "xyz"));          // -1
+// Please do not change the code below
+const s1 = prompt("Enter s1:");
+const s2 = prompt("Enter s2:");
+alert(indexOfIgnoreCase(s1, s2));
